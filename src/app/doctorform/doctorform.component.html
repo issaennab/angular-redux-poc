@@ -1,0 +1,30 @@
+<html>
+  <title>Doctors</title>
+<body>
+
+  <form class="form-style-9">
+      <h2>Doctor</h2>
+  <ul>
+  <li>
+      <input type="text" [(ngModel)]="doctor.firstname" name="firstname" class="field-style field-split align-left" placeholder="First Name" />
+      <input type="text" [(ngModel)]="doctor.lastname" name="lastname" class="field-style field-split align-right" placeholder="Last Name" />
+  
+  </li>
+  <li>
+      <textarea [(ngModel)]="doctor.address" name="address" class="field-style" placeholder="Address"></textarea>
+  </li>
+  <li>
+  <input type="text" [(ngModel)]="doctor.phone" name="phone" class="field-style field-full align-none" placeholder="Phone" />
+  <input type="text" [(ngModel)]="doctor.website" name="website" class="field-style field-full align-none" placeholder="Website" />
+  </li>
+
+  <li>
+  <input type="button" value="Patient" (click)="updateDoctor()" [routerLink]="['/patient',id]" />
+  <input type="button" value="Medicines" (click)="updateDoctor()"  [routerLink]="['/meds',id]" />
+  <input type="button" value="Done"  (click)="done()" />
+  </li>
+  </ul>
+  </form>
+  
+  </body>
+  </html>

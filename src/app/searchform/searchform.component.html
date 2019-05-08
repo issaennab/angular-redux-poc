@@ -1,0 +1,22 @@
+<h3>Patient Search</h3>
+<html>
+  <title>Patient Search</title>
+<body>
+   <!-- <h5>Patient Changed: {{patientChanged}}</h5>
+   <h5>Doctor Changed: {{doctorChanged}}</h5>
+   <h5>Meds Changed: {{medsChanged}}</h5> -->
+  <form class="form-style-9">
+      <h2>Patient Search</h2> 
+  <ul>
+  
+  <li *ngFor="let patient of patients | keyvalue" (click)="onSelect(patient.value)">
+      <a class="field-style field-full align-none">
+        {{patient.value.id}} {{patient.value.firstname}} {{patient.value.lastname}}
+      </a>
+  </li>
+
+  </ul>
+  </form>
+  
+  </body>
+  </html>

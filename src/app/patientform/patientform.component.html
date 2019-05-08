@@ -1,0 +1,31 @@
+<html>
+  <title>Patient</title>
+<body>
+   
+  <form class="form-style-9">
+      <h2>Patient</h2>
+  <ul>
+  <li>
+      <input type="text" [(ngModel)]="patient.firstname" name="firstname" class="field-style field-split align-left" placeholder="First Name" />
+      <input type="text" [(ngModel)]="patient.lastname"  name="lastname" class="field-style field-split align-right" placeholder="Last Name" />
+  
+  </li>
+  <li>
+      <input type="text" [(ngModel)]="patient.city"  name="city" class="field-style field-split align-left" placeholder="City" />
+      <input type="text" [(ngModel)]="patient.province" name="province" class="field-style field-split align-right" placeholder="Province" />
+  </li>
+  <li>
+  <input type="text" [(ngModel)]="patient.phone" name="phone" class="field-style field-full align-none" placeholder="Phone" />
+  <input type="text" [(ngModel)]="patient.email"  name="email" class="field-style field-full align-none" placeholder="Email" />
+  </li>
+
+  <li>
+  <input type="button" value="Doctor" (click)="updatePatient()" [routerLink]="['/doctor']"/>
+  <input type="button" value="Medicines" (click)="updatePatient()"  [routerLink]="['/meds']" />
+  <input type="button" value="Done"  (click)="done()"  />
+  </li>
+  </ul>
+  </form>
+  
+  </body>
+  </html>

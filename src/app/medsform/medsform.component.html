@@ -1,0 +1,30 @@
+<html>
+  <title>Doctors</title>
+<body>
+  <h5>Patient Changed: {{patientChanged}}</h5>
+  <h5>Doctor Changed: {{doctorChanged}}</h5>
+  <h5>Meds Changed: {{medsChanged}}</h5>
+  <form class="form-style-9">
+      <h2>Medicines</h2>
+  <ul>
+ 
+  <li>
+  <input type="text" [(ngModel)]="meds.med1" name="med1" class="field-style field-split-with-delete align-none" placeholder="Medicine" />
+  <input type="text" [(ngModel)]="meds.med2" name="med2" class="field-style field-split-with-delete align-none" placeholder="Medicine" />
+  <input type="text" [(ngModel)]="meds.med3" name="med3" class="field-style field-split-with-delete align-none" placeholder="Medicine" />
+  <input type="text" [(ngModel)]="meds.med4" name="med4" class="field-style field-split-with-delete align-none" placeholder="Medicine" />
+  <input type="text" [(ngModel)]="meds.med5" name="med5" class="field-style field-split-with-delete align-none" placeholder="Medicine" />
+
+</li>
+  <li>
+      <input type="button" value="Patient" (click)="updateMeds()" [routerLink]="['/patient',id]" />
+      <input type="button" value="Medicines" (click)="updateMeds()"  [routerLink]="['/doctor',id]" />
+      <input type="button" value="Done"  (click)="updateMeds()" routerLink="/" />
+
+
+  </li>
+  </ul>
+  </form>
+  
+  </body>
+  </html>
